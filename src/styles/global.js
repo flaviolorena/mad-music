@@ -18,9 +18,11 @@ html, body, #root{
 :root{
   :root {
     --background: #5c545c;
-    --secondary: #858182;
+    --secondary: #4F4F4F;
     --highlight: #dc3579;
     --white: #fefdfe;
+    --lightgrey: #ddd;
+    --mediumgrey: #696969;
     
   }
 }

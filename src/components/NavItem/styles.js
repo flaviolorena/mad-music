@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.span`
   display: flex;
-  padding: 5px 25px;
+  padding: 5px 20px;
   font-size: 14px;
   color: var(--white);
   text-decoration: none;
