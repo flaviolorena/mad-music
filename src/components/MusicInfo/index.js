@@ -2,11 +2,13 @@ import React from "react";
 
 import {Container, MusicTitle, Information} from './styles'
 
-export function MusicInfo() {
+export function MusicInfo(props) {
     return(
         <Container>
-            <MusicTitle> Título Música </MusicTitle>
-            <Information>Album - Pessoa - Ano</Information>
+            <MusicTitle> {props.info.title}</MusicTitle>
+            {props.info.artist && 
+            <Information>{props.info.artist} - {props.info.album} - {props.info.ano}</Information>
+            }
         </Container>
     )
 }

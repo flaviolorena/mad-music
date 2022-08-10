@@ -31,3 +31,14 @@ export const CoverContainer = styled.div`
     width: 100%;
     padding: 20px 0;
 `
+export const MusicCard = styled.div`
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: var(--white);
+    padding: 20px 0;
+`
+export const MusicTitle = styled.h2`
+    color: var(--secondary).
+    font-size: 18px;
+`

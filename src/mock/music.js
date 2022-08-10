@@ -6,6 +6,7 @@ const music = [
     artista: 'Racionais MCs',
     album: 'Nada como um dia após o outro dia',
     ano: 2002,
+    selected: false,
   },
   {
     id: 2,
@@ -13,6 +14,8 @@ const music = [
     artista: 'Tyler, The Creator',
     album: 'Wolf',
     ano: 2013,
+    selected: false,
+
   },
   {
     id: 3,
@@ -20,6 +23,8 @@ const music = [
     artista: 'Bob Marley & The Wailers',
     album: 'Kaya',
     ano: 1978,
+    selected: false,
+
   },
 
 ]
