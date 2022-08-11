@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState, useEffect } from "react";
 import NavBar from "../NavBar";
 import { MusicInfo } from "../MusicInfo";
 import { MusicCover } from "../MusicCover";
@@ -17,6 +17,15 @@ const [playing, setPlaying] = useState({
     selected: false,
 
 });
+useEffect(() => {
+    unsetSelected()
+
+}, [playing]);
+
+function unsetSelected() {
+    music.map((item) => item.selected = false)
+}
+
 
 const handleMusic = (item) =>{
 
@@ -27,10 +36,12 @@ const handleMusic = (item) =>{
         ano: item.ano,
     })
     function isSelected(){
-        return item.selected = !item.selected;
+        
+        item.selected = !item.selected;
     }
     isSelected()
 }
+
 
 const musicCard = music.map((item ) => (
     
