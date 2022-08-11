@@ -7,6 +7,8 @@ const music = [
     album: 'Nada como um dia após o outro dia',
     ano: 2002,
     selected: false,
+    like: false,
+    dislike: false,
   },
   {
     id: 2,
@@ -15,6 +17,8 @@ const music = [
     album: 'Wolf',
     ano: 2013,
     selected: false,
+    like: false,
+    dislike: false,
 
   },
   {
@@ -24,6 +28,8 @@ const music = [
     album: 'Kaya',
     ano: 1978,
     selected: false,
+    like: false,
+    dislike: false,
 
   },
 

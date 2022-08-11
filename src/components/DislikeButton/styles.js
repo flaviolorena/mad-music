@@ -14,11 +14,10 @@ export const Button = styled.div`
   background-color: var(--secondary);
   color: var(--white);
 
-
 `
 export const Thumb = styled(FiThumbsDown)`
   width: 20px;
   height: 20px;
-  color: var(--lightgrey);
-  // color: var(--highlight);
+  color: ${props => props.info.dislike ? "var(--highlight)" : "var(--lightgrey)"};
+
 `

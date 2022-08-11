@@ -1,8 +1,7 @@
 import styled from "styled-components"
 import { FiThumbsUp } from "react-icons/fi";
 
-export const Button = styled.div`
-  display: flex;
+export const Button = styled.button`
   padding: 5px 5px;
   justify-content: center;
   align-items: center;
@@ -15,11 +14,9 @@ export const Button = styled.div`
   color: var(--white);
   margin: 0 10px;
 
-
 `
 export const Thumb = styled(FiThumbsUp)`
   width: 20px;
   height: 20px;
-  color: var(--lightgrey);
-  color: var(--highlight);
+  color: ${props => props.info.like ? "var(--highlight)" : "var(--lightgrey)"};
 `
