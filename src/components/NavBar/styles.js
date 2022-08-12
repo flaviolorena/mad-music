@@ -1,17 +1,16 @@
+import { FiArrowLeft, FiMenu, FiSearch } from "react-icons/fi";
 import styled from "styled-components";
-import {FiSearch} from "react-icons/fi"
-import {FiMenu, FiArrowLeft} from "react-icons/fi"
 
 export const MenuBar = styled.div`
     position: absolute;
-    top: 5px;
+    top: 0px;
     width: 100%;
     background-color: var(--background);
     display: flex;
     justify-content: center;
     align-items: center;
     
-    `
+`
     export const Container = styled.div`
     display: flex;
     align-items: center;
@@ -85,4 +84,31 @@ export const LeftArrow = styled(FiArrowLeft)`
     @media(min-width: 901px) {
         display: none;
     }
+`
+
+export const OpenMenu = styled.div`
+    display:${(props) => props.info ? "flex" : "none"};
+    z-index: 1;
+    align-items: center;
+    justify-content;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40%;
+    height: 100vh;
+    border-radius: 30px 0px 0px 30px ;
+    background-color: var(--secondary);
+    
+`
+
+export const ListMenu = styled.ul`
+    display:flex;
+    align-items: center;
+    justify-content;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+
+ 
 `

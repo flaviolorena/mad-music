@@ -1,14 +1,15 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 
-import NavBar from "../NavBar";
-import { MusicInfo } from "../MusicInfo";
+import music from '../../mock/music.js';
+import DislikeButton from "../DislikeButton";
+import LikeButton from "../LikeButton";
 import { MusicCover } from "../MusicCover";
+import { MusicInfo } from "../MusicInfo";
+import NavBar from "../NavBar";
 import { PlayButton } from "../PlayButton";
-import {Container, Content, ButtonContainer, CoverContainer, } from './styles'
-import { DislikeButton } from "../DislikeButton";
-import { LikeButton } from "../LikeButton";
-import music from '../../mock/music.js'
+import { ButtonContainer, Container, Content, CoverContainer } from './styles';
+
 
 export default function Layout() {
 const [playing, setPlaying] = useState({
@@ -29,7 +30,9 @@ function like(item){
         ano: item.ano,
         selected: item.selected,
         like: !item.like,
-        dislike: false
+        dislike: false,
+        cover: item.cover,
+
     })
     
 }
@@ -41,7 +44,9 @@ function dislike(item){
         ano: item.ano,
         selected: item.selected,
         like: false,
-        dislike: !item.dislike
+        dislike: !item.dislike,
+        cover: item.cover,
+
     })
     
 }
@@ -59,6 +64,7 @@ const handleMusic = (item) =>{
         selected: false,
         like: false,
         dislike: false,
+        cover: item.cover,
     })
     isSelected()
     function isSelected(){
@@ -76,7 +82,7 @@ const musicCard = music.map((item ) => (
 )
 
     return(
-        <Container>
+        <Container info={playing.cover}>
             <NavBar/>
             <Content>
                 
@@ -84,16 +90,17 @@ const musicCard = music.map((item ) => (
                 <ButtonContainer>
                     <PlayButton />
                     <span onClick={() => like(playing)}>
-                        <LikeButton info={playing} />
-                    </span >
-                    <span onClick={() => dislike(playing)}>
-                    <DislikeButton info={playing} />
+                        <LikeButton  info={playing} />
+                    </span>
+                    <span onClick={() => dislike(playing)} >   
+                        <DislikeButton info={playing} />
                     </span>
                 </ButtonContainer>
                 <CoverContainer >
                     {musicCard}
                 </CoverContainer>
             </Content>
+
         </Container>
     )
 }

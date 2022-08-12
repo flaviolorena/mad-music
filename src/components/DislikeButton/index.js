@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Button, Thumb,} from './styles'
+import { Button, Thumb } from './styles';
 
-export function DislikeButton(props) {
+export default function DislikeButton(props) {
 
     return(
         

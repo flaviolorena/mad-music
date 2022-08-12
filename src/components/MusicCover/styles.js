@@ -12,8 +12,13 @@ export const Container = styled.div`
   border: 5px solid;
   border-color: ${props => props.border ? "var(--highlight)": "var(--secondary)"};
   overflow: hidden;
-  margin: 0 5px;
+  margin: 5px 5px;
   padding: 5px 10px;
+  cursor: pointer;
+  @media(max-width: 900px) {
+    margin: 10px 10px;
+
+}
     
 `
   

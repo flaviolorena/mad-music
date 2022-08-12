@@ -1,7 +1,7 @@
-import styled from "styled-components"
 import { FiThumbsDown } from "react-icons/fi";
+import styled from "styled-components";
 
-export const Button = styled.div`
+export const Button = styled.button`
   display: flex;
   padding: 5px 5px;
   justify-content: center;
