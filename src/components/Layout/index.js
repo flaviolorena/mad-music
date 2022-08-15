@@ -24,28 +24,18 @@ const [playing, setPlaying] = useState({
 
 function like(item){
     setPlaying({
-        title: item.title,
-        artist:item.artist,
-        album: item.album,
-        ano: item.ano,
-        selected: item.selected,
+        ...playing,
         like: !item.like,
         dislike: false,
-        cover: item.cover,
 
     })
     
 }
 function dislike(item){
     setPlaying({
-        title: item.title,
-        artist:item.artist,
-        album: item.album,
-        ano: item.ano,
-        selected: item.selected,
+        ...playing,
         like: false,
         dislike: !item.dislike,
-        cover: item.cover,
 
     })
     
