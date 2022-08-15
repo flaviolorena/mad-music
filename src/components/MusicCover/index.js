@@ -1,10 +1,10 @@
 import React from "react";
 
-import {Container, Title, Info} from './styles'
+import { Container, Info, Title } from './styles';
 
 export function MusicCover(props) {
     return(
-        <Container border={props.info.selected} >
+        <Container border={props.info.selected} onClick={() => props.onClick()} >
             <Title>{props.info.titulo}</Title>
             <Info>{props.info.artista}</Info>
             <Info>{props.info.album}</Info>

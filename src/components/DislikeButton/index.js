@@ -6,7 +6,7 @@ export default function DislikeButton(props) {
 
     return(
         
-        <Button> 
+        <Button onClick={() => props.onClick()} > 
             <Thumb info={props.info} />
         </Button>
     )

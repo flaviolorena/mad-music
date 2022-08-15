@@ -73,13 +73,7 @@ const handleMusic = (item) =>{
 
 }
 
-const musicCard = music.map((item ) => (
-    
-    <span onClick={() => handleMusic(item)} >
-            <MusicCover key={item.id} info={item} /> 
-    </span>
-    )
-)
+const musicCard = music.map((item ) => <MusicCover key={item.id} info={item} onClick={() => handleMusic(item)}  />)
 
     return(
         <Container info={playing.cover}>
@@ -89,12 +83,8 @@ const musicCard = music.map((item ) => (
                 <MusicInfo info={playing} />
                 <ButtonContainer>
                     <PlayButton />
-                    <span onClick={() => like(playing)}>
-                        <LikeButton  info={playing} />
-                    </span>
-                    <span onClick={() => dislike(playing)} >   
-                        <DislikeButton info={playing} />
-                    </span>
+                    <LikeButton  info={playing} onClick={() => like(playing)} />
+                    <DislikeButton info={playing} onClick={() => dislike(playing)} />
                 </ButtonContainer>
                 <CoverContainer >
                     {musicCard}
